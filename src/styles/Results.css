@@ -1,0 +1,39 @@
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2vw 5vh 2vw;
+  font-size: 5vw;
+  min-height: 80vh;
+}
+
+.results__answers {
+  text-align: center;
+  font-size: 7vw;
+}
+
+.results__homePage {
+  font-family: "Roboto Slab", serif;
+  border: 0.5vmax solid white;
+  padding: 2.5vmax;
+  border-radius: 30px;
+  font-size: 7vw;
+  margin-top: 2vh;
+}
+
+.results__title {
+  margin: 5vw;
+  -webkit-text-decoration: 1px underline rgba(255, 255, 255, 0.5);
+          text-decoration: 1px underline rgba(255, 255, 255, 0.5);
+  font-weight: 650;
+  text-align: center;
+  font-size: 7vw;
+}
+/*# sourceMappingURL=Results.css.map */

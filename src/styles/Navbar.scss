@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+.navbar__svg {
+  display: flex;
+  margin: 4vmax;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  stroke: #fffff0;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.navbar__title {
+  margin-right: 4vmax;
+  font-family: "Roboto Slab", serif;
+  font-size: 7vmax;
+  flex-grow: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}

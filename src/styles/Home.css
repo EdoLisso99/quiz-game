@@ -1,0 +1,36 @@
+a {
+  color: white;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+  font-size: 5.8vmax;
+}
+
+.home__startBtn {
+  font-family: "Roboto Slab", serif;
+  border: 0.5vmax solid white;
+  padding: 2.5vmax;
+  border-radius: 30px;
+  font-size: 7vw;
+}
+
+.home__welcome {
+  margin-bottom: 15vmax;
+  font-weight: 650;
+  font-size: 8vw;
+}
+/*# sourceMappingURL=Home.css.map */
