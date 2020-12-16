@@ -31,7 +31,7 @@ function App() {
       opacity: 1,
       fill: "rgba(17, 16, 66, 1)",
       transition: {
-        delay: 1.5,
+        delay: 2.5,
         duration: 1.7,
         ease: "easeInOut",
       },

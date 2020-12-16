@@ -4,6 +4,34 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
 function Home({ allVariants }) {
+  const ballVar = {
+    hidden: {
+      opacity: 0,
+      fill: "rgba(17, 16, 66, 0)",
+    },
+    exit: {
+      x: "-100vw",
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+    visible: {
+      opacity: 1,
+      fill: "rgba(17, 16, 66, 1)",
+      x: [30, -30],
+      y: [0, -40],
+      transition: {
+        delay: 4.2,
+        x: {
+          yoyo: Infinity,
+          duration: 0.5,
+        },
+        y: {
+          yoyo: Infinity,
+          duration: 0.25,
+        },
+      },
+    },
+  };
+
   return (
     <div className="home">
       <motion.div
@@ -15,6 +43,13 @@ function Home({ allVariants }) {
       >
         Welcome to Quiz Game!
       </motion.div>
+      <motion.div
+        className="home__ball"
+        variants={ballVar}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      ></motion.div>
       <Link to="/questionone">
         <motion.p
           className="home__startBtn"

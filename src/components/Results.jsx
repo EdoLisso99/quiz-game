@@ -36,18 +36,17 @@ function Results({ answers, setAnswers }) {
     hidden: {
       opacity: 0,
       scale: 0,
-      rotate: 360,
     },
     visible: {
       opacity: 1,
       scale: 1,
-      rotate: 0,
+
       transition: {
+        delay: 1,
+        duration: 3,
         type: "spring",
         stiffness: 260,
         damping: 20,
-        delay: 1,
-        duration: 3,
       },
     },
     exit: {

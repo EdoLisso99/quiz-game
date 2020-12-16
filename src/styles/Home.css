@@ -17,6 +17,14 @@ a {
   font-size: 3vw;
 }
 
+.home__ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  margin-bottom: 3vh;
+}
+
 .home__startBtn {
   font-family: "Roboto Slab", serif;
   border: 0.5vmax solid white;
@@ -26,7 +34,7 @@ a {
 }
 
 .home__welcome {
-  margin: 15vh 0;
+  margin: 15vh 0 13vh 0;
   font-weight: 650;
 }
 

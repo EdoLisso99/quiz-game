@@ -31,7 +31,11 @@ function Navbar({ squareVariants }) {
         ease: "easeInOut",
       },
     },
-    hover: { scale: 0.9 },
+    hover: {
+      rotate: [0, -40],
+      scale: 0.9,
+      transition: { yoyo: Infinity, ease: "easeInOut" },
+    },
   };
 
   const item = {
