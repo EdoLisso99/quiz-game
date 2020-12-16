@@ -3,12 +3,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 20vh;
+  min-height: 5vh;
+  font-size: 3vmax;
+}
+
+.navbar__rect {
+  stroke: none;
 }
 
 .navbar__svg {
   display: flex;
-  margin: 4vmax;
+  margin: 2vh 2vmax;
   width: 65px;
   height: 65px;
   overflow: hidden;
@@ -19,9 +24,99 @@
 }
 
 .navbar__title {
-  margin-right: 4vmax;
+  margin-right: 2vmax;
   font-family: "Roboto Slab", serif;
-  font-size: 7vmax;
+  font-weight: 700;
   flex-grow: 1;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar__title {
+    font-size: 4vmax;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .navbar__svg {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .navbar__svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar__svg {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .navbar__svg {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .navbar__svg {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .navbar__svg {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .navbar__svg {
+    width: 135px;
+    height: 135px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .navbar__svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .navbar__svg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 4000px) {
+  .navbar__svg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 5000px) {
+  .navbar__svg {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 6000px) {
+  .navbar__svg {
+    width: 350px;
+    height: 350px;
+  }
 }

@@ -1,5 +1,6 @@
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Question from "./components/Question";
@@ -7,7 +8,8 @@ import Results from "./components/Results";
 import "./styles/App.css";
 
 function App() {
-  let answer = [];
+  const [answer, setAnswer] = useState([]);
+  const location = useLocation();
   const arr = [0, 1, 2];
   const title = [
     "Question one:  What is the capital of Italy?",
@@ -20,37 +22,63 @@ function App() {
     ["Milan", "Florence", "Rome", "Palermo", "Naples"],
   ];
 
+  const variants = {
+    hidden: {
+      opacity: 0,
+      fill: "rgba(17, 16, 66, 0)",
+    },
+    visible: {
+      opacity: 1,
+      fill: "rgba(17, 16, 66, 1)",
+      transition: {
+        delay: 1.5,
+        duration: 1.7,
+        ease: "easeInOut",
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="app">
       <div className="app__navbar">
-        <Navbar />
+        <Navbar squareVariants={variants} />
       </div>
-
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        {arr.map((value) => (
-          <Route
-            path={`/question${
-              value === 0 ? "one" : value === 1 ? "two" : "three"
-            }`}
-          >
-            <Question
-              value={value}
-              returnAnswer={(e) => {
-                answer = [...answer, e];
-                console.log("Answers: ", answer);
+      <AnimatePresence>
+        <Switch location={location} key={location.key}>
+          <Route exact path="/">
+            <Home allVariants={variants} />
+          </Route>
+          {arr.map((value) => (
+            <Route
+              path={`/question${
+                value === 0 ? "one" : value === 1 ? "two" : "three"
+              }`}
+            >
+              <Question
+                value={value}
+                returnAnswer={(e) => {
+                  setAnswer([...answer, e]);
+                  console.log("InnerAnswers: ", answer);
+                }}
+                title={title[value]}
+                possibleAnswers={possibleAnswers[value]}
+              />
+            </Route>
+          ))}
+          <Route path="/results">
+            <Results
+              answers={answer}
+              setAnswers={() => {
+                setAnswer([]);
               }}
-              title={title[value]}
-              possibleAnswers={possibleAnswers[value]}
             />
           </Route>
-        ))}
-        <Route path="/results">
-          <Results />
-        </Route>
-      </Switch>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }

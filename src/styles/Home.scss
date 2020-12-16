@@ -6,24 +6,29 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-  font-size: 5.8vmax;
+  min-height: 85vh;
+  font-size: 3vw;
 }
 
 .home__startBtn {
   font-family: "Roboto Slab", serif;
   border: 0.5vmax solid white;
-  padding: 2.5vmax;
-  border-radius: 30px;
-  font-size: 7vw;
+  padding: 1.5vmax;
+  border-radius: 5vmax;
+  font-size: 2vw;
 }
 
 .home__startBtn:hover {
 }
 
 .home__welcome {
-  margin-bottom: 15vmax;
+  margin: 15vh 0;
   font-weight: 650;
-  font-size: 8vw;
+}
+
+@media only screen and (max-width: 700px) {
+  .home__startBtn,
+  .home__welcome {
+    font-size: 4vmax;
+  }
 }

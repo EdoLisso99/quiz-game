@@ -1,13 +1,37 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
-function Home() {
+function Home({ allVariants }) {
   return (
     <div className="home">
-      <div className="home__welcome">Welcome to Quiz Game!</div>
+      <motion.div
+        className="home__welcome"
+        variants={allVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        Welcome to Quiz Game!
+      </motion.div>
       <Link to="/questionone">
-        <a className="home__startBtn">Start Your Game!</a>
+        <motion.p
+          className="home__startBtn"
+          variants={allVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          whileHover={{
+            scale: 1.1,
+            boxShadow: "0px 0px 8px 0px rgb(255, 255, 255)",
+            transition: {
+              yoyo: Infinity,
+            },
+          }}
+        >
+          Start Your Game!
+        </motion.p>
       </Link>
     </div>
   );
