@@ -1,4 +1,4 @@
-# Weather App
+# Quiz Game
 
 ## Progetto visibile sul link https://quiz-game-c5d87.web.app/
 
